@@ -1,0 +1,28 @@
+<% include partials/header %>
+<div class="row" style="margin-top:40px">
+   <div class="col-md-3">
+
+   </div>
+   <div class="col-md-9">
+     <% if(currentUser) { %>
+     <% if(!post){ %>
+     <h1> Create a new blog</h1>
+     <form action="/blog/new" method="post">
+           <div class="form-group">
+            <input style="width:40vw" class="form-control" type="text" name="title" placeholder="Title"></div>
+             <div class="form-group">
+           <textarea style="width:40vw" class="form-control" rows="5" name="content" placeholder="Write Here"></textarea></div>
+              <div class="form-group">
+            <input type="submit" class="btn btn-success">
+     </form></div>
+     <% }else { %>
+       <h1>The link for your post is<a href="<%=st %>" >Here</a></h1>
+       <% } %>
+       <% }else{ %>
+         <h1>Please Login</h1>
+         <% } %>
+</div>
+
+
+
+<% include partials/footer %>
