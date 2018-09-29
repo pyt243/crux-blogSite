@@ -3,12 +3,12 @@
 <div class="col-md-10" style="padding:20px;border:3px solid black;margin:auto">
   <h1 style="text-align:center"><%= blog.title %></h1>
   <h4 style="text-align:center">By:<%= blog.author.username %></h4>
-  <h4 style="text-align:center">Number of likes:<%= blog.likes.length %></h4>
+
   <p style="width:80%;margin:auto;"><%= blog.content %></p>
   <% if(blog.likes.indexOf(currentUser._id)==-1){ %>
-  <button class="btn btn-success like" data-test-value="1">Like</button>
+  <button class="btn btn-success like" data-test-value="1" style="margin:10px 47%;width:6%">Like</button>
   <% }else{ %>
-    <button class="btn btn-danger like" data-test-value="0">Unlike</button>
+    <button class="btn btn-danger like" data-test-value="0" style="margin:10px 47%;width:6%">Unlike</button>
     <% } %>
 </div>
 </div>
